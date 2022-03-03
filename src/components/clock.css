@@ -1,0 +1,98 @@
+:root {
+    --primary-color: blue;
+    --secondary-color: white;
+    --tertiary-color: darkgrey;
+    --border-color: lightgrey;
+}
+
+.clock-face-container {
+    background-color: var(--secondary-color);
+    border: 2em var(--border-color) solid;
+    border-radius: 1em;
+}
+
+.clock-time {
+    font-size: 5em;
+    font-weight: bolder;
+    color: var(--primary-color);
+    padding: 1em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cycle-button {
+    display: flex;
+    justify-content: center;
+    width: 5em;
+    height: 2em;
+    background-color: var(--tertiary-color);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    font-size: 2em;
+    font-weight: bolder;
+    border: solid darkgrey 5px;
+    border-bottom: 0;
+    color: var(--primary-color);
+}
+
+.color-button-container {
+    display: flex;
+    gap: 1em;
+}
+
+.color-button {
+    display: flex;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    background-color: var(--tertiary-color);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    font-size: 2em;
+    font-weight: bolder;
+
+}
+
+.light {
+    border: solid blue 5px;
+    border-bottom: 0;
+    background-color: lightgrey;
+}
+
+.dark {
+    border: solid red 5px;
+    border-bottom: 0;
+    background-color: black;
+}
+
+.space {
+    border: solid orange 5px;
+    border-bottom: 0;
+    background-color: purple;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2em;
+    margin-top: 1em;
+    border-radius: 1em;
+    background-color: var(--secondary-color);
+}
+
+.date-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color)
+}
+
+svg {
+    max-height: 3em;
+    padding: 0.5em;
+
+}
