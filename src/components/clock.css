@@ -1,77 +1,58 @@
 :root {
-    --primary-color: blue;
-    --secondary-color: white;
-    --tertiary-color: darkgrey;
-    --border-color: lightgrey;
+    --primary-color: #FF8600;
+    --secondary-color: #27187E;
+    --tertiary-color: #F1F2F6;
+    --border-color: #F1F2F6;
 }
 
 .clock-face-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     background-color: var(--secondary-color);
     border: 2em var(--border-color) solid;
+    width: 40em;
+    height: 15em;
     border-radius: 1em;
+    z-index: 3;
 }
 
 .clock-time {
     font-size: 5em;
     font-weight: bolder;
     color: var(--primary-color);
-    padding: 1em;
+}
+
+.clock-svg {
+    max-height: 1.5em;
 }
 
 .button-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .cycle-button {
     display: flex;
     justify-content: center;
-    width: 5em;
+    align-items: center;
     height: 2em;
-    background-color: var(--tertiary-color);
+    max-width: fit-content;
+    background-color: #758BFD;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     font-size: 2em;
     font-weight: bolder;
-    border: solid darkgrey 5px;
+    border: solid black 5px;
     border-bottom: 0;
     color: var(--primary-color);
+    padding: 0.25em 1em;
+    z-index: 2;
 }
 
-.color-button-container {
-    display: flex;
-    gap: 1em;
-}
-
-.color-button {
-    display: flex;
-    justify-content: center;
-    width: 2em;
-    height: 2em;
-    background-color: var(--tertiary-color);
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    font-size: 2em;
-    font-weight: bolder;
-
-}
-
-.light {
-    border: solid blue 5px;
-    border-bottom: 0;
-    background-color: lightgrey;
-}
-
-.dark {
-    border: solid red 5px;
-    border-bottom: 0;
-    background-color: black;
-}
-
-.space {
-    border: solid orange 5px;
-    border-bottom: 0;
-    background-color: purple;
+.cycle-button:hover {
+    filter: brightness(120%);
 }
 
 .date-container {
@@ -94,5 +75,4 @@
 svg {
     max-height: 3em;
     padding: 0.5em;
-
 }
