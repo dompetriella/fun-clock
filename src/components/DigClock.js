@@ -6,18 +6,22 @@ function DigClock(props) {
     const [time, setTime] = useState()
     const [date, setDate] = useState()
     const [dayCycle, setDayCycle] = useState(false)
-    const [theme, setTheme] = useState()
+    
+    useEffect(() => {
+        const dateObj = new Date()
+        setTime(dateObj.toLocaleTimeString('en-US', {hour12: dayCycle}))
+        setDate(dateObj.toLocaleDateString('en-US'))
+    }, [])
 
     useEffect(() => {
         const interval = setInterval(() => {
             const dateObj = new Date()
-            let currentTime = setTime(dateObj.toLocaleTimeString('en-US', {hour12: dayCycle}))
-            let currentDate = setDate(dateObj.toLocaleDateString('en-US'))
-            console.log('repeat')
+            setTime(dateObj.toLocaleTimeString('en-US', {hour12: dayCycle}))
+            setDate(dateObj.toLocaleDateString('en-US'))
         }, 1000)
 
         return () => clearInterval(interval)
-    }, [])
+    })
 
     return (
         <div>
